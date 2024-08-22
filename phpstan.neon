@@ -1,0 +1,31 @@
+includes:
+	- vendor/phpstan/phpstan/conf/bleedingEdge.neon
+
+parameters:
+	level: 7
+	customRulesetUsed: true
+	reportUnmatchedIgnoredErrors: false
+	ignoreErrors:
+	  - "#iterable type#"
+	  - "#^Unsafe usage of new static#"
+	  - "#Form extends @internal class#"
+	  - "#^Class .* extends @internal class#"
+	  - "#^Plugin definitions cannot be altered.#"
+	  - '#Missing cache backend declaration for performance.#'
+	  - '#Plugin manager has cache backend specified but does not declare cache tags.#'
+	  - "#Drupal calls should be avoided in classes, use dependency injection instead#"
+	excludePaths:
+	  - */.*.php
+	  - */core/*
+	  - */sites/*
+	  - */settings*.php
+	  - */node_modules/*
+	  - */themes/contrib/*
+	  - */modules/contrib/*
+	  - */profiles/contrib/*
+	  - */bower_components/*
+	  - */tests/fixtures/*.php
+	  - */default.settings*.php
+	  - */tests/Drupal/Tests/Listeners/Legacy/*
+	paths:
+		- web

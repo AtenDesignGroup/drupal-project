@@ -1,0 +1,62 @@
+grumphp:
+  testsuites:
+    git_commit_msg:
+      tasks:
+        - git_commit_message
+
+    git_pre_commit:
+      tasks:
+        - phpcs
+        - phpstan
+        - composer
+        - git_blacklist
+        - securitychecker_roave
+
+  tasks:
+    # Refer to phpcs.xml
+    phpcs:
+    # Refer to phpstan.neon
+    phpstan:
+      use_grumphp_paths: false
+    # https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/phpstan.md
+    composer:
+      file: ./composer.json
+      strict: false
+      no_check_all: true
+      no_check_lock: false
+      no_check_publish: false
+      with_dependencies: false
+    # https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/phpcsfixer.md
+    phpcsfixer:
+      triggered_by: ['php']
+    # https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/git_commit_message.md
+    git_commit_message:
+      allow_empty_message: false
+      enforce_capitalized_subject: true
+      enforce_no_subject_punctuations: false
+      enforce_no_subject_trailing_period: true
+      enforce_single_lined_subject: true
+      type_scope_conventions: []
+      max_body_width: 0
+      max_subject_width: 0
+      matchers:
+        Must contain JIRA issue number: /JIRA-\d+/
+      case_insensitive: true
+      multiline: true
+      additional_modifiers: ''
+    # https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/git_blacklist.md
+    git_blacklist:
+      keywords:
+        - 'die\\('
+        - 'print\\('
+        - 'var_dump\\('
+      whitelist_patterns: []
+      triggered_by: ['php']
+      regexp_type: G
+      match_word: false
+      ignore_patterns: []
+    # https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/securitychecker/roave.md
+    securitychecker_roave:
+      jsonfile: ./composer.json
+      lockfile: ./composer.lock
+      run_always: false
