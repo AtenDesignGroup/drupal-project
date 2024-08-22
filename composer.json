@@ -24,8 +24,9 @@
         "drupal/drupal": "*"
     },
     "scripts": {
+        "local:stop": "robo env:stop",
+        "local:start": "robo env:start",
         "post-create-project-cmd": [
-            "mv grumphp.example.yml grumphp.dist.yml",
             "robo aten:project"
         ]
     },
@@ -112,9 +113,33 @@
                 "[web-root]/INSTALL.txt": false,
                 "[web-root]/sites/README.txt": false,
                 "[web-root]/themes/README.txt": false,
-                "[project-root]/.editorconfig": false,
                 "[web-root]/modules/README.txt": false,
                 "[web-root]/profiles/README.txt": false,
+                "[project-root]/.editorconfig": {
+                    "mode": "replace",
+                    "path": "assets/.editorconfig",
+                    "overwrite": false
+                },
+                "[project-root]/phpcs.xml.dist": {
+                    "mode": "replace",
+                    "path": "assets/phpcs.xml.dist",
+                    "overwrite": false
+                },
+                "[project-root]/grumphp.dist.yml": {
+                    "mode": "replace",
+                    "path": "assets/grumphp.dist.yml",
+                    "overwrite": false
+                },
+                "[project-root]/.php-cs-fixer.dist.php": {
+                    "mode": "replace",
+                    "path": "assets/.php-cs-fixer.dist.php",
+                    "overwrite": false
+                },
+                "[project-root]/.twig-cs-fixer.dist.php": {
+                    "mode": "replace",
+                    "path": "assets/.twig-cs-fixer.dist.php",
+                    "overwrite": false
+                },
                 "[web-root]/sites/default/settings.php": {
                     "mode": "replace",
                     "path": "assets/sites/default/settings.php",
