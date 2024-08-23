@@ -6,6 +6,9 @@
     "prefer-stable": true,
     "minimum-stability": "stable",
     "config": {
+        "platform": {
+            "php": "8.2"
+        },
         "sort-packages": true,
         "preferred-install": "dist",
         "allow-plugins": {
@@ -108,7 +111,6 @@
                 "web-root": "web/"
             },
             "file-mapping": {
-                "[web-root]/README.txt": false,
                 "[web-root]/README.txt": false,
                 "[web-root]/INSTALL.txt": false,
                 "[web-root]/sites/README.txt": false,
