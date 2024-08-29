@@ -3,7 +3,6 @@
     "description": "Aten Drupal Project",
     "type": "project",
     "license": "GPL-2.0-or-later",
-    "prefer-stable": true,
     "minimum-stability": "stable",
     "config": {
         "platform": {
