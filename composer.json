@@ -46,7 +46,6 @@
         "aten/aten_standard": "10.x-dev",
         "composer/installers": "^2.2",
         "cweagans/composer-patches": "^1.7",
-        "drupal/admin_dialogs": "^1.0",
         "drupal/admin_toolbar": "^3.4",
         "drupal/ajax_loader": "^2.1",
         "drupal/config_ignore": "^3.3",
