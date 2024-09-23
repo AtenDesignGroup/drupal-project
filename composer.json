@@ -67,7 +67,6 @@
         "drupal/replicate": "^1.2",
         "drupal/replicate_ui": "^1.1",
         "drupal/tab_toolbar": "^1.0",
-        "drupal/token_or": "^2.2",
         "drupal/toolbar_manager": "^2.0",
         "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/view_unpublished": "^1.2",
