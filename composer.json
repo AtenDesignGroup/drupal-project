@@ -62,7 +62,6 @@
         "drupal/metatag": "^2.0",
         "drupal/multiple_selects": "^1.1",
         "drupal/pathauto": "^1.11",
-        "drupal/prototype": "^5@alpha",
         "drupal/rabbit_hole": "^1.0@alpha",
         "drupal/redirect": "^1.9",
         "drupal/replicate": "^1.2",
