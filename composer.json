@@ -53,7 +53,6 @@
         "drupal/core-recommended": "^10.0",
         "drupal/entity_usage": "^2.0@beta",
         "drupal/environment_indicator": "^4.0",
-        "drupal/extlink": "^1.7",
         "drupal/field_config_cardinality": "^3.0",
         "drupal/field_group": "^3.4",
         "drupal/flood_control": "^2.3",
