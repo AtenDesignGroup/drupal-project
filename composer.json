@@ -30,7 +30,12 @@
         "local:start": "robo env:start",
         "post-create-project-cmd": [
             "robo aten:project"
-        ]
+        ],
+        "test:ap-installer": [
+            "@cleanup:ap-installer",
+            "./scripts/aten-project-install-test.sh"
+        ],
+        "cleanup:ap-installer": "rm -rf ~/Desktop/ap-test"
     },
     "repositories": [
         {
